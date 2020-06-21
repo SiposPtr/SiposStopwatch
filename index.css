@@ -1,0 +1,100 @@
+.buttons {
+  background-color: #656d42;
+  border-radius: 12px;
+}
+.timer {
+  background-color: #656d42;
+  font-size: 550%;
+  border-radius: 12px;
+}
+.results {
+  background-color: #656d42;
+  border-radius: 12px;
+}
+.resultCell {
+  background-color: #656d42;
+}
+.kozep {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+}
+.jobb {
+  float: right;
+  width: 10%;
+  padding: 10px;
+  border: 3px solid #656d42;
+  background-color: #656d42;
+  border-radius: 12px;
+}
+#ezred {
+  width: 5%
+}
+#óra {
+  display:inline;
+}
+#perc {
+  display:inline;
+}
+#mp {
+  display:inline;
+}
+#ezred {
+  display:inline;
+}
+.button1 {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 30%;
+  border-radius: 25px;
+}
+.button2 {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 30%;
+  border-radius: 25px;
+}
+.button3 {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 30%;
+  border-radius: 25px;
+}
+.button4 {
+  background-color: Orange;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 20%;
+  border-radius: 25px;
+}
+#myTable {
+  font-size: large;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="index.css">
+  <title>Sipos Stopwatch</title>
+  <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+  <h1 class="kozep">Sipos Stopwatch</h1>
+  <br>
+  <div class="timer kozep">
+    <p id="óra">0</p>
+    :
+    <p id="perc">0</p>
+    :
+    <p id="mp">0</p>
+    :
+    <p id="ezred">0</p>
+  </div>
+  <br>
+  <br>
+  <div class="buttons kozep">
+    <input class="button1" type="button" value="Start" onclick="start()" />
+    <input class="button2" type="button" value="Stop" onclick="stop()" />
+    <input class="button3" type="button" value="Reset" onclick="reset()" />
+  </div>
+  <br>
+  <div class="jobb" id="eddigiek">
+    <h3 align="center"><u>Fastest Lap</u></h3>
+    <p id="legjobb"></p>
+    <h3 align="center"><u>Slowest Lap</u></h3>
+    <p id="leghosszabb"></p>
+  </div>
+  <br>
+  <div class="results kozep">
+    <button class="button4" type="button" onclick="insertRow()">New Lap</button>
+    <table class="kozep">
+      <tr>
+        <td><h2>Results</h2></td>
+      </tr>
+    </table>
+    <table id="myTable">
+    </table>
+  </div>
+</body>
+
+</html>
