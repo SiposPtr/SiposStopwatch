@@ -1,6 +1,17 @@
+body {
+  color: #ffffff;
+  background-color: #000000;
+  font-family: 'digital-7', sans-serif;
+}
+
 .buttons {
   background-color: #656d42;
   border-radius: 12px;
+  font-family: 'digital-7', sans-serif;
+}
+@font-face {
+  font-family: 'digital-7';
+  src: url('digital-7.ttf');
 }
 .timer {
   background-color: #656d42;
@@ -43,6 +54,9 @@
 #ezred {
   display:inline;
 }
+#kettospont {
+  display:inline;
+}
 .button1 {
   background-color: #4CAF50;
   border: none;
@@ -55,6 +69,7 @@
   cursor: pointer;
   width: 30%;
   border-radius: 25px;
+  font-family: 'digital-7', sans-serif;
 }
 .button2 {
   background-color: #008CBA;
@@ -68,6 +83,7 @@
   cursor: pointer;
   width: 30%;
   border-radius: 25px;
+  font-family: 'digital-7', sans-serif;
 }
 .button3 {
   background-color: #f44336;
@@ -81,6 +97,7 @@
   cursor: pointer;
   width: 30%;
   border-radius: 25px;
+  font-family: 'digital-7', sans-serif;
 }
 .button4 {
   background-color: Orange;
@@ -94,6 +111,7 @@
   cursor: pointer;
   width: 20%;
   border-radius: 25px;
+  font-family: 'digital-7', sans-serif;
 }
 #myTable {
   font-size: large;
