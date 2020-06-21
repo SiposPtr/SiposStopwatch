@@ -67,6 +67,11 @@ function stop() {
   window.fut = false;
   console.log("****************************************");
 
+  var ezred = document.getElementById("ezred").innerHTML;
+  var mp = document.getElementById("mp").innerHTML;
+  var perc = document.getElementById("perc").innerHTML;
+  var ora = document.getElementById("óra").innerHTML;
+
   localStorage.setItem('e', adatok[3]);
   localStorage.setItem('mp', adatok[2]);
   localStorage.setItem('p', adatok[1]);
@@ -75,7 +80,7 @@ function stop() {
   var legjobb = document.getElementById("legjobb");
   var leghosszabb = document.getElementById("leghosszabb");
 
-  var rovidebb = localStorage.getItem('rovidebb'); // azért 0 mert nem adok neki sehol értéket
+  var rovidebb = localStorage.getItem('rovidebb');
   console.log("rovidebb: " + rovidebb);
 
   var hosszabb = localStorage.getItem('hosszabb');
@@ -93,7 +98,22 @@ function stop() {
   console.log("maximumStrAtvaltottFormat: " + maximumStrAtvaltottFormat);
   console.log("minimumStrAtvaltottFormat: " + minimumStrAtvaltottFormat);
 
-  leghosszabb.innerHTML = maximumStrAtvaltottFormat; // split maximum by number of digits xx:xx:xx:xx
+  // ha nincs óra/perc, akkor rakjon 0: -ot a maximumStrAtvaltottFormat elé
+
+  if (ora == 0 && perc == 0) {
+    console.log("NINCS ÓRA ÉS NINCS PERC");
+    maximumStrAtvaltottFormat = "0:" + "0:" + maximumStrAtvaltottFormat;
+    minimumStrAtvaltottFormat = "0:" + "0:" + minimumStrAtvaltottFormat;
+  } else if (ora == 0 && perc != 0) {
+    console.log("NINCS ÓRA de VAN PERC");
+    maximumStrAtvaltottFormat = "0:" + maximumStrAtvaltottFormat;
+    minimumStrAtvaltottFormat = "0:" + minimumStrAtvaltottFormat;
+  } else {
+    console.log("VAN ÓRA ÉS VAN PERC");
+  };
+
+
+  leghosszabb.innerHTML = maximumStrAtvaltottFormat;
   legjobb.innerHTML = minimumStrAtvaltottFormat;
 
   console.log("****************************************");
