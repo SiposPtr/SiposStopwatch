@@ -81,7 +81,7 @@ function stop() {
   var leghosszabb = document.getElementById("leghosszabb");
 
   var rovidebb = localStorage.getItem('rovidebb');
-  console.log("rovidebb: " + rovidebb); // ez null
+  console.log("rovidebb: " + rovidebb);
 
   var hosszabb = localStorage.getItem('hosszabb');
   console.log("hosszabb: " + hosszabb);
@@ -90,7 +90,7 @@ function stop() {
     console.log("osztható ezerrel");
   };
 
-  console.log("MAXIMUM: " + maximum); // EZ ELVILEG JO, EZ ALAPJAN CSINALD MEG A MINIMNUMOT,meg meg at kene váltani
+  console.log("MAXIMUM: " + maximum);
   console.log("MINIMUM: " + minimum);
   var maximumStrAtvaltottFormat = convertToFormat(maximum);
   var minimumStrAtvaltottFormat = convertToFormat(minimum);
@@ -113,11 +113,10 @@ function stop() {
   };
 
   leghosszabb.innerHTML = maximumStrAtvaltottFormat;
-  legjobb.innerHTML = minimumStrAtvaltottFormat; // ez még nincs meg
+  legjobb.innerHTML = minimumStrAtvaltottFormat;
 
   console.log("****************************************");
 
-  // már csak a slowest lap indexe, fastest lap, annak az indexe, ccs, code clean up kell, aztan kesz
   return;
 }
 
@@ -263,27 +262,17 @@ function insertRow() {
 
     if (maximum < mpTomb[lapSzamlalo]) {
       console.log("maximum elozo: " + maximum);
-      console.log("nagyobb");
+      console.log("nagyobb mint az elozo");
       maximum = mpTomb[lapSzamlalo];
       console.log("MAXIMUM: " + maximum);
 
       localStorage.setItem('hosszabb', maximum)
-    } else {
-      console.log("kisebb");
+    } else  {
+      minimum = Math.min.apply(null, mpTomb.filter(function(n) { return !isNaN(n); }));
+      console.log("MINIMUM: " + minimum);
     };
     console.log("mpTomb[lapSzamlalo]: " + mpTomb[lapSzamlalo]);
 
-    /*
-    // ez elvileg szar,és nem a kacsacsőrt kell megváltoztatni,mert akkor elkurja a maxot is
-    while (minimum < mpTomb[lapSzamlalo]) {
-      console.log("kisebb"); // ez sose fut le mert a minimum mindig nulla
-      minimum = mpTomb[lapSzamlalo];
-      console.log("MINIMNUM: " + minimum); // mindig nulla
-
-      localStorage.setItem('rovidebb', minimum)
-    };
-    console.log("minimum: " + minimum); // mindig nulla
-    */
 
   } else if (window.fut == false) {
     console.log("REEEEEE");
