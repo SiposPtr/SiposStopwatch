@@ -81,7 +81,7 @@ function stop() {
   var leghosszabb = document.getElementById("leghosszabb");
 
   var rovidebb = localStorage.getItem('rovidebb');
-  console.log("rovidebb: " + rovidebb);
+  console.log("rovidebb: " + rovidebb); // ez null
 
   var hosszabb = localStorage.getItem('hosszabb');
   console.log("hosszabb: " + hosszabb);
@@ -92,13 +92,11 @@ function stop() {
 
   console.log("MAXIMUM: " + maximum); // EZ ELVILEG JO, EZ ALAPJAN CSINALD MEG A MINIMNUMOT,meg meg at kene váltani
   console.log("MINIMUM: " + minimum);
-  var maximumStrAtvaltottFormat = convertToFormat(maximum); // ez váltja át időbe, csak nem írja elől az órát, ha nincs, de igazabol ez se akkora baj, mert mukodik
+  var maximumStrAtvaltottFormat = convertToFormat(maximum);
   var minimumStrAtvaltottFormat = convertToFormat(minimum);
 
   console.log("maximumStrAtvaltottFormat: " + maximumStrAtvaltottFormat);
   console.log("minimumStrAtvaltottFormat: " + minimumStrAtvaltottFormat);
-
-  // ha nincs óra/perc, akkor rakjon 0: -ot a maximumStrAtvaltottFormat elé
 
   if (ora == 0 && perc == 0) {
     console.log("NINCS ÓRA ÉS NINCS PERC");
@@ -108,17 +106,18 @@ function stop() {
     console.log("NINCS ÓRA de VAN PERC");
     maximumStrAtvaltottFormat = "0:" + maximumStrAtvaltottFormat;
     minimumStrAtvaltottFormat = "0:" + minimumStrAtvaltottFormat;
-  } else {
+  } else  if (ora != 0 && perc == 0) {
+    console.log("VAN ÓRA de NINCS PERC");
+  } else if (ora != 0 && perc != 0){
     console.log("VAN ÓRA ÉS VAN PERC");
   };
 
-
   leghosszabb.innerHTML = maximumStrAtvaltottFormat;
-  legjobb.innerHTML = minimumStrAtvaltottFormat;
+  legjobb.innerHTML = minimumStrAtvaltottFormat; // ez még nincs meg
 
   console.log("****************************************");
 
-  // már csak a slowest lap indexe, fastest lap, annak az indexe, ccs, code clean up kell, aztan mehet github
+  // már csak a slowest lap indexe, fastest lap, annak az indexe, ccs, code clean up kell, aztan kesz
   return;
 }
 
@@ -211,7 +210,6 @@ function insertRow() {
     console.log("elozo oraja: " + kor[uj][1]);
 
     if (lapSzamlalo == 1) {
-      console.log("lapSzamlalo EGYENLO EGY");
       kellEzred = ezredSzamlalo;
       kellMp = mpSzamlalo;
       kellPerc = percSzamlalo;
@@ -263,23 +261,32 @@ function insertRow() {
     console.log("mpTomb[" + (lapSzamlalo - 1) + "]: " + mpTomb[lapSzamlalo - 1]);
     seged++;
 
-    while (maximum < mpTomb[lapSzamlalo]) {
+    if (maximum < mpTomb[lapSzamlalo]) {
+      console.log("maximum elozo: " + maximum);
       console.log("nagyobb");
       maximum = mpTomb[lapSzamlalo];
       console.log("MAXIMUM: " + maximum);
 
       localStorage.setItem('hosszabb', maximum)
-    };
-
-    // ez elvileg szar,és nem a kacsacsőrt kell megváltoztatni,mert akkor elkurja a maxot is
-    while (minimum > mpTomb[lapSzamlalo]) {
+    } else {
       console.log("kisebb");
+    };
+    console.log("mpTomb[lapSzamlalo]: " + mpTomb[lapSzamlalo]);
+
+    /*
+    // ez elvileg szar,és nem a kacsacsőrt kell megváltoztatni,mert akkor elkurja a maxot is
+    while (minimum < mpTomb[lapSzamlalo]) {
+      console.log("kisebb"); // ez sose fut le mert a minimum mindig nulla
       minimum = mpTomb[lapSzamlalo];
-      console.log("MINIMNUM: " + minimum);
+      console.log("MINIMNUM: " + minimum); // mindig nulla
 
       localStorage.setItem('rovidebb', minimum)
     };
+    console.log("minimum: " + minimum); // mindig nulla
+    */
+
   } else if (window.fut == false) {
     console.log("REEEEEE");
+    alert("The clock is stopped which means you cannot create a new lap.")
   }
 }

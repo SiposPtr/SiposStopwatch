@@ -1,118 +1,88 @@
 body {
-  color: #ffffff;
-  background-color: #000000;
-  font-family: 'digital-7', sans-serif;
+	color: #fff;
+	background-color: #000;
+	font-family: digital-7, sans-serif
 }
-
 .buttons {
-  background-color: #656d42;
-  border-radius: 12px;
-  font-family: 'digital-7', sans-serif;
+	background-color: #656d42;
+	border-radius: 12px;
+	font-family: digital-7, sans-serif
 }
-@font-face {
-  font-family: 'digital-7';
-  src: url('digital-7.ttf');
-}
-.timer {
-  background-color: #656d42;
-  font-size: 550%;
-  border-radius: 12px;
-}
-.results {
-  background-color: #656d42;
-  border-radius: 12px;
-}
-.resultCell {
-  background-color: #656d42;
-}
-.kozep {
-  margin: auto;
-  width: 50%;
-  text-align: center;
-  padding: 10px;
-}
-.jobb {
-  float: right;
-  width: 10%;
-  padding: 10px;
-  border: 3px solid #656d42;
-  background-color: #656d42;
-  border-radius: 12px;
+@font-face{font-family:digital-7;src:url(digital-7.ttf)}.timer{background-color:#656d42;font-size:550%;border-radius:12px}.results{background-color:#656d42;border-radius:12px}.kozep{margin:auto;width:50%;text-align:center;padding:10px}.jobb{float:right;width:10%;padding:10px;border:3px solid #656d42;
+background-color:#656d42;
+border-radius:12px
 }
 #ezred {
-  width: 5%
+	width: 5%
 }
 #óra {
-  display:inline;
+	display: inline
 }
 #perc {
-  display:inline;
+	display: inline
 }
 #mp {
-  display:inline;
+	display: inline
 }
 #ezred {
-  display:inline;
-}
-#kettospont {
-  display:inline;
+	display: inline
 }
 .button1 {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  width: 30%;
-  border-radius: 25px;
-  font-family: 'digital-7', sans-serif;
+	background-color: #4caf50;
+	border: none;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	width: 30%;
+	border-radius: 25px;
+	font-family: digital-7, sans-serif
 }
 .button2 {
-  background-color: #008CBA;
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  width: 30%;
-  border-radius: 25px;
-  font-family: 'digital-7', sans-serif;
+	background-color: #008cba;
+	border: none;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	width: 30%;
+	border-radius: 25px;
+	font-family: digital-7, sans-serif
 }
 .button3 {
-  background-color: #f44336;
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  width: 30%;
-  border-radius: 25px;
-  font-family: 'digital-7', sans-serif;
+	background-color: #f44336;
+	border: none;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	width: 30%;
+	border-radius: 25px;
+	font-family: digital-7, sans-serif
 }
 .button4 {
-  background-color: Orange;
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  width: 20%;
-  border-radius: 25px;
-  font-family: 'digital-7', sans-serif;
+	background-color: Orange;
+	border: none;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	width: 20%;
+	border-radius: 25px;
+	font-family: digital-7, sans-serif
 }
 #myTable {
-  font-size: large;
+	font-size: large
 }
